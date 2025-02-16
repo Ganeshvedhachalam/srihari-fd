@@ -10,6 +10,9 @@
     "src/main.ts"
   ],
   "include": [
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "src/main.ts",
+    "src/polyfills.ts",
+    "src/environments/environment.ts"
   ]
 }
