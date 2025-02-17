@@ -1,11 +1,11 @@
 <div class="header-container">
   <nav
-    class="text-white nav-bar flex justify-between bg-black w-full h-[100px] items-center"
+    class="text-white text-sm md:text-xl nav-bar flex justify-between bg-black w-full  h-[100px] items-center"
   >
-    <div class="flex justify-evenly left-side nav item w-52 items-center">
-      <p>logo</p>
+    <div class=" text-xs md:text-xl flex space-x-2 justify-evenly left-side nav-item w-[30%]  md:w-[30%]  items-center">
+     
       <div
-        class="bg-white object-cover rounded-full w-[40px] h-[40px] overflow-hidden border-red-600 border-4 border-double"
+        class="bg-white object-cover rounded-full w-[40px] overflow-hidden border-red-600 border-4 border-double"
       >
         <!-- Use [src] binding to dynamically load the image -->
         <img
@@ -19,11 +19,12 @@
     </div>
 
     <div
-      class="logos-container flex justify-evenly rightside-nav-items w-[40%] items-center"
+      class="logos-container flex text-[70%] font-medium text-sm md:text-xl
+       justify-evenly rightside-nav-items w-[60%] md:w-[50%]  items-center"
     >
       <a
         href="https://www.instagram.com/sri_hari_balasubramanian/?hl=en"
-        class="space-x-2 hover:text-red-400 active:scale-95"
+        class=" hover:text-red-400  active:scale-95 flex  space-x-1"
       >
         <fa-icon [icon]="faInstagram"></fa-icon>
         <span>Instagram</span>
@@ -31,14 +32,14 @@
 
       <a
         href="https://www.instagram.com/sri_hari_balasubramanian/?hl=en"
-        class="space-x-2 hover:text-blue-400 active:scale-95"
+        class=" hover:text-blue-400 active:scale-95 flex  space-x-1 "
       >
         <fa-icon [icon]="faLinkedin"></fa-icon>
         <span>LinkedIn</span>
       </a>
       <a
         href="tel:+919003130371"
-        class="space-x-2 hover:text-green-400 active:scale-95"
+        class=" hover:text-green-400 active:scale-95 flex space-x-1"
         onclick="if (window.innerWidth > 768) { alert('Please dial manually on your phone: +91 9003130371'); return false; }"
       >
         <fa-icon [icon]="faPhone"></fa-icon>

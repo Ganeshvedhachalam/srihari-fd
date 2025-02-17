@@ -1,27 +1,27 @@
-<div class="home-page-container bg-white-400 w-full h-screen p-20">
+<div class="home-page-container bg-white-400 w-full h-screen p-5 md:p-20">
   <div class="hero-section-container flex h-full relative">
     <div
-      class="border-4 border-black home-box flex flex-col w-[80%] relative h-full text-white justify-evenly items-start pl-9"
+      class="border-4 border-black home-box text-wrap bg-black flex flex-col w-[90%] md:w-[80%] h-full text-white justify-evenly items-start pl-3 md:pl-9 relative"
     >
       <div class="absolute inset-0 bg-black z-0"></div>
       <div
         class="absolute inset-0 bg-white-800 bg-gradient-to-r from-red-700 via-blue-700 to-green-400 opacity-80 animate-wave"
       ></div>
       <div
-        class="relative z-10 flex flex-col text-white justify-evenly h-full pl-2"
+        class="relative flex flex-col text-white justify-evenly gap-2 h-full pl-2"
       >
         <!-- <h1 class="text-3xl font-bold">Cool Wave Background</h1> -->
-        <h1 class="heading w-[70%] text-5xl font-bold">{{ heading }}</h1>
-        <h2 class="subheading w-[70%] text text-3xl">{{ subHeading }}</h2>
-        <p class="w-[70%] text-xl">{{ actionText }}</p>
-        <p class="text-justify text-xl w-[70%] text font-serif font-medium">
+        <h1 class="heading w-full md:w-[70%] text-wrap text-xl md:text-5xl font-bold">{{ heading }}</h1>
+        <h2 class="subheading text-wrap leading-4 w-[60%] md:w-[70%] text-sm md:text-3xl">{{ subHeading }}</h2>
+        <p class="w-[60%] md:w-[70%] text-sm md:text-xl">{{ actionText }}</p>
+        <p class="line-clamp-5 text-start text-sm/5 tracking-tight md:text-xl w-[60%] md:w-[70%] text font-serif font-medium  whitespace-pre-line " style="word-spacing:0.15em;">
           {{ detailText }}
         </p>
-        <p class="text-xl font-semibold w-[70%]">{{ contactText }}</p>
+        <p class="text-sm  md:text-xl font-semibold w-[60%] md:w-[70%]">{{ contactText }}</p>
       </div>
     </div>
     <div
-      class="object-cover overflow-hidden w-[40%] h-[70%] self-center absolute right-0 border-4 border-double border-green-500 rounded-xl"
+      class="object-cover overflow-hidden w-[40%] h-[40%] md:w-[40%] md:h-[70%] self-center absolute right-0 border-4 border-double border-black rounded-xl"
     >
       <img class="w-full h-full" src="{{ heroImageUrl }}" alt="" />
     </div>
