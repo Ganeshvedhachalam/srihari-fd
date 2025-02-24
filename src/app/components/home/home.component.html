@@ -14,10 +14,15 @@
         <h1 class="heading w-[90%] md:w-[70%] text-wrap text-xl md:text-5xl font-bold">{{ heading }}</h1>
         <h2 class="subheading text-wrap leading-4 w-[60%] md:w-[70%] text-sm md:text-3xl">{{ subHeading }}</h2>
         <p class="w-[60%] md:w-[70%] text-sm md:text-xl">{{ actionText }}</p>
-        <p class="line-clamp-5 text-start text-sm/5 tracking-tight md:text-xl w-[60%] md:w-[70%] text font-serif font-medium  whitespace-pre-line " style="word-spacing:0.15em;">
+        <p  class="line-clamp-5 text-start text-sm/5 tracking-tight md:text-xl w-[60%] md:w-[70%] text font-serif font-medium  whitespace-pre-line " style="word-spacing:0.15em;">
+          
           {{ detailText }}
         </p>
-        <p class="text-sm  md:text-xl font-semibold w-[60%] md:w-[70%]">{{ contactText }}</p>
+        <p 
+        class="text-sm md:text-xl font-semibold w-[60%] md:w-[70%]" 
+        [innerHTML]="contactText" 
+        (click)="navigateToForm($event)">
+      </p>
       </div>
     </div>
     <div

@@ -1,1 +1,24 @@
-<p>form-fill works!</p>
+<div class="form container">
+    <form action="" (submit)="submitForm($event)" class="flex flex-col gap-3 p-5">
+        <label for="clientName">
+            <h1>Enter your Name</h1>
+        </label>
+       
+        <input type="text" [(ngModel)]="name" name="clientName" id="clientName" placeholder="Enter your name" class="bg-gray-200 ring-2 ring-gray-600 shadow-sm p-3">
+        <label for="email">
+            <h1>Enter your Email</h1>
+        </label>
+        <input type="email" [(ngModel)]="email" name="email" id="email" placeholder="Enter your email" class="bg-gray-200 ring-2 ring-gray-600 shadow-sm p-3">
+<label for="PhoneNumber">
+    <h1>Enter your Phone Number</h1>
+</label>
+<input type="text" [(ngModel)]="phoneNumber" name="PhoneNumber" id="PhoneNumber" placeholder="Enter your phone number" class="bg-gray-200 ring-2 ring-gray-600 shadow-sm p-3"> 
+   <label for="message">
+            <h1>Enter your Message</h1> 
+   </label>
+   <textarea [(ngModel)]="message" name="message" id="message" placeholder="enter your message" class="bg-green-100 outline-none focus:outline-dashed focus:border-4"></textarea>
+
+        <button type="submit" class="bg-green-200 ring-2 ring-green-600 shadow-sm p-3 w-40">Submit</button>
+    </form>
+</div>
+

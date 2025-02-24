@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
+  constructor(private router:Router) {
+
+  }
   heroImageUrl = 'assets/srihari/Screenshot from 2025-02-07 19-04-50.png';
   heading = 'Transform Your Table Tennis Skills with Personalized Training!';
   subHeading = `If you have the vision and passion to learn and master table tennis, you’re in the right place. Join me on this journey to elevate your game.`;
@@ -15,5 +19,12 @@ export class HomeComponent {
   detailText =
     "I provide customized training programs for players and beginners. Whether you're looking to refine your skills or start from scratch, my videos, courses, and personalized coaching will guide you every step of the way. Let’s make your table tennis dreams a reality!";
   contactText =
-    'For personalized training, contact me now and let’s get started!';
+    'For personalized training, contact me now and let’s <span class="font-bold cursor-pointer" id="getstarted" > get started! </span>';
+
+    navigateToForm(event:Event){
+      // const target=event.target as HTMLElement;
+      // if(target.id=="getstarted"){
+        this.router.navigate(["/form"])
+      // }
+    }
 }
